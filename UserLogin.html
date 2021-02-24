@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>维护系统--管理登录</title>
+    <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common/style.css">
+    <script type="text/javascript" src="../../lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="../../lib/json/json2.js"></script>
+    <script type="text/javascript" src="../../js/common/common.js"></script>
+    <script type="text/javascript" src="../../lib/numkeyboard/numkeyboard.js"></script>
+    <style>
+    	.blue,.closebtn{
+    		border-radius: 5px;
+    	}
+    </style>
+</head>
+
+<body class="bg-box">
+    <div class="pull-right login-main">
+        <div class="logo-box" style="height:12%;">
+            <img src="../../images/login.png" alt="">
+            <span class="line"></span>
+        </div>
+        <div class="login-inner">
+            <div class="user-select">
+                <ul>
+                    <li>
+                        <div class="select-box">
+                            <span id="qwe" class="select-txt">银行人员</span>
+                            <div class="option pull-top">
+                                <a>银行人员</a>
+                                <a>厂商人员</a>
+                              <!--  <a>超级管理员</a>-->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <input type="hidden" id="select_value"/>
+            </div>
+            <div class="password">
+                <img src="../../images/psd-icon.png" class="psd-img" alt="">
+                <input id="passwordText" type="password" value="" class="numkeyboard">
+            </div>
+            <div class="login-btn">
+                <input type="button" class="blue" value="登录" onclick="login()" />
+            </div>
+            <div class="login-btn">
+                <input type="button" class="closebtn" value="返回业务系统" onclick="sentEventType('returnTrans')" />
+            </div>
+        </div>
+    </div>
+    <div class="key-bg keyboard-box">
+    </div>
+</body>
+<script type="text/javascript" src="../../js/UserLogin/userLogin.js"></script>
+<script type="text/javascript" src="../../js/common/common.js"></script>
+<script type="text/javascript" src="../../js/common/dialog.js"></script>
+</html>

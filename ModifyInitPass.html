@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>维护系统--管理登录</title>
+		<link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../../css/common/common.css">
+		<link rel="stylesheet" type="text/css" href="../../css/common/style.css">
+		<script type="text/javascript" src="../../lib/jquery/jquery.js"></script>
+		<script type="text/javascript" src="../../lib/json/json2.js"></script>
+		<script type="text/javascript" src="../../js/common/common.js"></script>
+		<script type="text/javascript" src="../../lib/numkeyboard/numkeyboard.js"></script>
+		<style>
+			.blue {
+				width: 150px !important;
+			}
+			.logo-box {
+				text-align: center;
+				width: 70% !important;
+				height: 50px;
+			}
+			.title-text {
+				font-size: 30px;
+				color: #05589D;
+				text-shadow: 1.2px 1.3px 1.4px #A5DBFA;
+			}
+			.login-main {
+				top: 24%;
+				width: 410px;
+				height: 470px;
+			}
+			.key-bg {
+				top: 29%;
+				height: 55%;
+			}
+			.closebtn, .blue{
+				border-radius: 5px;
+			}
+	
+		</style>
+	</head>
+
+	<body class="bg-box">
+		<div class="login-main">
+			<div class="logo-box">
+				<span class="title-text">修改密码</span>
+			</div>
+			<div class="login-inner" style="top:60%;">
+				<div class="tip" style="font-size:17px;">
+					<img src="../../../img/Icon/tip.png" alt="" style="width:18px;height:18px;">&nbsp;&nbsp;
+					<span id="modifyPwdReason" class="tip-content" style="color:red"></span>
+				</div>
+				<div class="password">
+					<img src="../../images/psd-icon.png" class="psd-img" alt="">
+					<input id="passwordText" name="newPassword" type="password" value="" placeholder="请输入六位新密码" class="numkeyboard">
+				</div>
+				<div class="password">
+					<img src="../../images/psd-icon.png" class="psd-img" alt="">
+					<input id="passwordText" name="newPasswordAgain" type="password" value="" placeholder="请确认六位新密码" class="numkeyboard">
+				</div>
+				<div class="login-btn" style="margin-top: 0px;">
+					<input type="button" class="blue" value="返      回" style="color: #0B8CD7 !important;background-color: #fff !important;border:1px solid #0B8CD7 !important" onclick="returnUp()" />
+					<input type="button" class="blue" value="确认修改" onclick="confirmModify()" />
+				</div>
+				<div class="login-btn" style="margin-top:0px;">
+					<input type="button" class="closebtn" value="返回业务系统" onclick="sentEventType('returnTrans')" />
+				</div>
+			</div>
+		</div>
+		<div class="key-bg keyboard-box">
+		</div>
+	</body>
+	<script type="text/javascript" src="../../js/UserLogin/ModifyInitPass.js"></script>
+	<script type="text/javascript" src="../../js/common/common.js"></script>
+	<script type="text/javascript" src="../../js/common/dialog.js"></script>
+
+</html>

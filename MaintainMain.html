@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.ohtml4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>维护系统测试页面--系统自动诊断</title>
+    <link rel="stylesheet" type="text/css" href="css/common/common.css">
+    <script type="text/javascript" src="js/download/jquery.js"></script>
+    <script type="text/javascript" src="js/download/json2.js"></script>
+    <script type="text/javascript" src="js/common/common.js"></script>
+</head>
+
+<body data-maq-flow-layout="false" data-maq-comptype="desktop" class="claro" data-maq-ws="collapse" id="myapp" data-maq-appstates="{}">
+    <div style="position: absolute; z-index: 900; left: 10px; top: 15px; width: 1260px; height: 200px; background-color: yellow;">
+        <input type="button" value="打印结账" style="height:40px;font-size: 20px" onclick="sentEventType('printTotal')">
+        <input type="button" value="设置钱箱张数" style="height:40px;font-size: 20px" onclick="sentEventType('TTI')">
+        <input type="button" value="打印吞卡信息" style="height:40px;font-size: 20px" onclick="sentEventType('captureCard')">
+        <input type="button" value="打印异常信息" style="height:40px;font-size: 20px" onclick="sentEventType('abnormal')">
+        <input type="button" value="查询钞箱信息" style="height:40px;font-size: 20px" onclick="sentEventType('cashBoxInfo')">
+        <input type="button" value="查询钞票信息" style="height:40px;font-size: 20px" onclick="sentEventType('OCRInfo')">
+		<input type="button" value="硬币长短款信息" style="height:40px;font-size: 20px" onclick="sentEventType('coinShortLong')">
+    </div>
+    <div style="position: absolute; z-index: 900; width: 200px; height: 500px; left: 9px; top: 250px; background-color: yellow;">
+        <input type="button" value="退出" style="width:100px;height:40px;font-size: 20px" onclick="cancel()">
+        <input type="button" value="快捷模式" style="width:100px;height:40px;font-size: 20px" onclick="cancel()">
+    </div>
+    <div style="position: absolute; z-index: 900; width: 550px; height: 500px; left: 220px; top: 250px; background-color: yellow;">
+        <label>凭条打印机：----</label>
+        <img id="PRPImg" src="">
+        <br>
+        <label>维护打印机：----</label>
+        <img id="MLPImg" src="">
+        <br>
+        <label>银行卡读卡器：----</label>
+        <img id="BankCardImg" src="">
+        <br>
+        <label>键盘：----</label>
+        <img id="KeyBoardImg" src="">
+        <br>
+        <label>io控制板：----</label>
+        <img id="IOImg" src="">
+        <br>
+        <label>纸币循环箱：----</label>
+        <img id="TCRImg" src="">
+        <br>
+        <label>存折：----</label>
+        <img id="ICCARDImg" src="">
+        <br>
+        <label>指纹仪：----</label>
+        <img id="FIGImg" src="">
+        <br>
+        <label>身份证阅读器：----</label>
+        <img id="IDCARDImg" src="">
+        <br>
+        <label>非接IC卡：----</label>
+        <img id="NFCImg" src="">
+        <br>
+        <label>条码扫描仪：----</label>
+        <img id="BARImg" src="">
+        <br>
+        <label>摄像头：----</label>
+        <img id="CameraImg" src="">
+    </div>
+    <div style="position: absolute; z-index: 900; right: 20px; top: 250px; width: 325px; height: 250px; background-color: yellow;">
+        <table style="border-collapse: collapse; table-layout: fixed; position: absolute; z-index: 900; width: 303px; height: 158px; left: 12.5px; top: 8.5px; background-color: yellow;" border="0">
+            <tbody>
+                <tr>
+                    <th>ID</th>
+                    <th>钱箱状态</th>
+                    <th>剩余张数</th>
+                    <th>币种</th>
+                    <th>面额</th>
+                    <th>类型</th>
+                </tr>
+            </tbody>
+    </div>
+</body>
+<script type="text/javascript" src="../../js/UserLogin/MaintainMain.js"></script>
+
+</html>
